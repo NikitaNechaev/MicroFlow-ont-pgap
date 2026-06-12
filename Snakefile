@@ -31,7 +31,7 @@ rule nanoplot:
         "results/001_nanoplot/{strain}/nanoplot_report.html"
     threads: 1
     resources:
-        mem_mb=1000
+        mem_mb=10000,
         time_min=30
     shell:
         """
