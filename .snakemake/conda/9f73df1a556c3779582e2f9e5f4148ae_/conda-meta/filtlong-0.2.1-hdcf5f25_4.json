@@ -1,0 +1,44 @@
+{
+  "name": "filtlong",
+  "version": "0.2.1",
+  "build": "hdcf5f25_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "filtlong-0.2.1-hdcf5f25_4.tar.bz2",
+  "md5": "32701d68dc07e6fe66943312023e565c",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/filtlong-0.2.1-hdcf5f25_4.tar.bz2",
+  "sha256": "68ac3c28a5736d178cba2024cf361945edecf3848b4064c993e0aa344bf80910",
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libzlib >=1.2.13,<2.0a0",
+    "zlib"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0",
+  "timestamp": 1722513827000,
+  "size": 88096,
+  "requested_spec": "filtlong=0.2.1",
+  "package_tarball_full_path": "/home/nikita/.conda/pkgs/filtlong-0.2.1-hdcf5f25_4.tar.bz2",
+  "extracted_package_dir": "/home/nikita/.conda/pkgs/filtlong-0.2.1-hdcf5f25_4",
+  "files": [
+    "bin/filtlong"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/filtlong",
+        "path_type": "hardlink",
+        "sha256": "05d5d81e1a9219864cebf791e1749753ef395faac8a8803bad2823606be552f3",
+        "size_in_bytes": 209088,
+        "sha256_in_prefix": "05d5d81e1a9219864cebf791e1749753ef395faac8a8803bad2823606be552f3"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/nikita/.conda/pkgs/filtlong-0.2.1-hdcf5f25_4",
+    "type": 1
+  }
+}

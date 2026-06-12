@@ -1,0 +1,11 @@
+prefix=/home/nikita/Code/Snakemake/.snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/home/nikita/Code/Snakemake/.snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.5.2
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

@@ -36,10 +36,12 @@ rule flye1:
         time_min=config["resources"]["flye"]["time_min"]
     conda:
         "envs/flye.yaml"
+    params:
+        extra = config['flye']['extra']
     shell:
         """
         mkdir -p $(dirname {output.assembly})
-        flye --nano-raw {input} --out-dir $(dirname {output.assembly}) --threads {threads} {config['flye']['extra']} --meta
+        flye --nano-raw {input} --out-dir $(dirname {output.assembly}) --threads {threads} {params.extra} --meta
         """
 
 rule parse_flye1_length:
@@ -74,7 +76,7 @@ rule filtlong:
     shell:
         """
         mkdir -p $(dirname {output})
-        filtlong --target_bases {params.keep_bases} --min_length {config[filtlong].min_length} --keep_percent {config[filtlong].keep_percent} {input.reads} > {output}
+        filtlong --target_bases {params.keep_bases} --min_length {config[filtlong][min_length]} --keep_percent {config[filtlong][keep_percent]} {input.reads} > {output}
         """
 
 rule flye2:
@@ -90,8 +92,8 @@ rule flye2:
         "envs/flye.yaml"
     shell:
         """
-        mkdir -p {output[0].parent}
-        flye --nano-hq {input} --out-dir {output[0].parent} --threads {threads} {config['flye']['extra']}
+        mkdir -p $(dirname {output[0]})
+        flye --nano-hq {input} --out-dir $(dirname {output[0]}) --threads {threads} {config[flye][extra]}
         """
 
 rule taxcheck:
@@ -107,8 +109,8 @@ rule taxcheck:
         "base"
     shell:
         """
-        mkdir -p {output[0].parent}
-        {config[pgap][pgap_path]} --taxcheck-only -g {input} --output {output[0].parent} -s 'bacterium sp.' -c {threads} -n
+        mkdir -p $(dirname {output[0]})
+        {config[pgap][pgap_path]} --taxcheck-only -g {input} --output $(dirname {output[0]}) -s 'bacterium sp.' -c {threads} -n
         """
 
 rule parse_taxcheck:
@@ -122,7 +124,7 @@ rule parse_taxcheck:
         time_min=config["resources"]["merge"]["time_min"]
     shell:
         """
-        mkdir -p {output[0].parent}
+        mkdir -p $(dirname {output[0]})
         python scripts/get_species_name.py {input} {output}
         """
 

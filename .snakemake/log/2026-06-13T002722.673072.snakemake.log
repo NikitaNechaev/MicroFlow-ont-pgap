@@ -1,0 +1,93 @@
+Assuming unrestricted shared filesystem usage.
+Falling back to greedy scheduler because no ILP solver is found (you have to install pulp and either coincbc or glpk).
+
+SNAKEMAKE
+=========
+  Date: 2026-06-13 00:27:22
+  Workflow ID: 789d6331-430b-411f-be34-f2468b62e037
+  Platform: Linux-6.12.91-1-MANJARO-x86_64-with-glibc2.43
+  Host: ThinkPad-T14-gen3
+  User: nikita
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /home/nikita/anaconda3/envs/snakemake/bin/snakemake --cores 10 --use-conda results/005_taxcheck/E20P1/species_name.txt
+  Snakefile: /home/nikita/Code/Snakemake/Snakefile
+  Base directory: /home/nikita/Code/Snakemake
+  Run directory: /home/nikita/Code/Snakemake
+  Working directory: /home/nikita/Code/Snakemake
+  Config file(s): ['config.yaml']
+  Config MD5: a83b2f6ea8c3b2b4fc13352ea7ad7762
+
+Building DAG of jobs...
+Creating conda environment envs/filtlong.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/nikita/Code/Snakemake/envs/filtlong.yaml created (location: .snakemake/conda/9f73df1a556c3779582e2f9e5f4148ae_)
+Creating conda environment envs/flye.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/nikita/Code/Snakemake/envs/flye.yaml created (location: .snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_)
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+flye1                     1
+parse_flye1_length        1
+filtlong                  1
+flye2                     1
+taxcheck                  1
+parse_taxcheck            1
+total                     6
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Jun 13 00:28:33 2026]
+localrule flye1:
+    input: results/001_merge/E20P1/merged.fastq.gz
+    output: results/002_flye1/E20P1/assembly.fasta, results/002_flye1/E20P1/flye.log
+    jobid: 6
+    reason: Missing output files: results/002_flye1/E20P1/assembly.fasta; Software environment definition has changed since last execution
+    wildcards: strain=E20P1
+    threads: 10
+    resources: tmpdir=/tmp, time_min=1440, mem_mb=80000, mem=80 GB, mem_mib=76294
+Activating conda environment: .snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_
+RuleException:
+CalledProcessError in file "/home/nikita/Code/Snakemake/Snakefile", line 42:
+Command 'source /opt/miniconda3/bin/activate '/home/nikita/Code/Snakemake/.snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_'; set -euo pipefail;  
+        mkdir -p $(dirname results/002_flye1/E20P1/assembly.fasta)
+        flye --nano-raw results/001_merge/E20P1/merged.fastq.gz --out-dir $(dirname results/002_flye1/E20P1/assembly.fasta) --threads 10  --meta' returned non-zero exit status 1.
+[Sat Jun 13 00:28:35 2026]
+Error in rule flye1:
+    message: None
+    jobid: 6
+    input: results/001_merge/E20P1/merged.fastq.gz
+    output: results/002_flye1/E20P1/assembly.fasta, results/002_flye1/E20P1/flye.log
+    conda-env: /home/nikita/Code/Snakemake/.snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_
+    shell:
+        
+        mkdir -p $(dirname results/002_flye1/E20P1/assembly.fasta)
+        flye --nano-raw results/001_merge/E20P1/merged.fastq.gz --out-dir $(dirname results/002_flye1/E20P1/assembly.fasta) --threads 10  --meta
+        
+        (command exited with non-zero exit code)
+Removing output files of failed job flye1 since they might be corrupted:
+results/002_flye1/E20P1/flye.log
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat Jun 13 00:28:35 2026]
+Error in rule flye1:
+    message: None
+    jobid: 6
+    input: results/001_merge/E20P1/merged.fastq.gz
+    output: results/002_flye1/E20P1/assembly.fasta, results/002_flye1/E20P1/flye.log
+    conda-env: /home/nikita/Code/Snakemake/.snakemake/conda/edb2db426f8f636ff202391a3b26c7f0_
+    shell:
+        
+        mkdir -p $(dirname results/002_flye1/E20P1/assembly.fasta)
+        flye --nano-raw results/001_merge/E20P1/merged.fastq.gz --out-dir $(dirname results/002_flye1/E20P1/assembly.fasta) --threads 10  --meta
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/nikita/Code/Snakemake/.snakemake/log/2026-06-13T002722.673072.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

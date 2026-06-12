@@ -1,0 +1,871 @@
+{
+  "name": "flye",
+  "version": "2.9.6",
+  "build": "py313h7fbb527_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "flye-2.9.6-py313h7fbb527_1.conda",
+  "md5": "d0dee465ea8ba11178bacee809cc5409",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/flye-2.9.6-py313h7fbb527_1.conda",
+  "sha256": "cea489ce1fe794e2f0529c0259d3e547ea2183a3e423ab4c7792bc8d227b25bc",
+  "depends": [
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "libzlib >=1.3.2,<2.0a0",
+    "python >=3.13,<3.14.0a0",
+    "python_abi 3.13.* *_cp313"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1776054012000,
+  "size": 33715547,
+  "requested_spec": "flye=2.9",
+  "package_tarball_full_path": "/home/nikita/.conda/pkgs/flye-2.9.6-py313h7fbb527_1.conda",
+  "extracted_package_dir": "/home/nikita/.conda/pkgs/flye-2.9.6-py313h7fbb527_1",
+  "files": [
+    "bin/flye",
+    "bin/flye-minimap2",
+    "bin/flye-modules",
+    "bin/flye-samtools",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/INSTALLER",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/METADATA",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/RECORD",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/REQUESTED",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/WHEEL",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/direct_url.json",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/entry_points.txt",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/licenses/LICENSE",
+    "lib/python3.13/site-packages/flye-2.9.6.dist-info/top_level.txt",
+    "lib/python3.13/site-packages/flye/__build__.py",
+    "lib/python3.13/site-packages/flye/__init__.py",
+    "lib/python3.13/site-packages/flye/__pycache__/__build__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/__pycache__/__version__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/__pycache__/main.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/__pycache__/six.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/__version__.py",
+    "lib/python3.13/site-packages/flye/assembly/__init__.py",
+    "lib/python3.13/site-packages/flye/assembly/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/assembly/__pycache__/assemble.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/assembly/__pycache__/repeat_graph.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/assembly/__pycache__/scaffolder.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/assembly/assemble.py",
+    "lib/python3.13/site-packages/flye/assembly/repeat_graph.py",
+    "lib/python3.13/site-packages/flye/assembly/scaffolder.py",
+    "lib/python3.13/site-packages/flye/config/__init__.py",
+    "lib/python3.13/site-packages/flye/config/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/config/__pycache__/configurator.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/config/__pycache__/py_cfg.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/asm_corrected_reads.cfg",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/asm_defaults.cfg",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/asm_hifi.cfg",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/asm_nano_hq.cfg",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/asm_subasm.cfg",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_g36_homopolymers.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_g36_substitutions.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_homopolymers.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_substitutions.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_chm13_homopolymers.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_chm13_substitutions.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_homopolymers.mat",
+    "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_substitutions.mat",
+    "lib/python3.13/site-packages/flye/config/configurator.py",
+    "lib/python3.13/site-packages/flye/config/py_cfg.py",
+    "lib/python3.13/site-packages/flye/main.py",
+    "lib/python3.13/site-packages/flye/polishing/__init__.py",
+    "lib/python3.13/site-packages/flye/polishing/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/polishing/__pycache__/alignment.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/polishing/__pycache__/bubbles.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/polishing/__pycache__/consensus.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/polishing/__pycache__/polish.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/polishing/alignment.py",
+    "lib/python3.13/site-packages/flye/polishing/bubbles.py",
+    "lib/python3.13/site-packages/flye/polishing/consensus.py",
+    "lib/python3.13/site-packages/flye/polishing/polish.py",
+    "lib/python3.13/site-packages/flye/repeat_graph/__init__.py",
+    "lib/python3.13/site-packages/flye/repeat_graph/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/repeat_graph/__pycache__/graph_alignment.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/repeat_graph/__pycache__/repeat_graph.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/repeat_graph/graph_alignment.py",
+    "lib/python3.13/site-packages/flye/repeat_graph/repeat_graph.py",
+    "lib/python3.13/site-packages/flye/short_plasmids/__init__.py",
+    "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/circular_sequences.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/plasmids.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/unmapped_reads.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/utils.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/short_plasmids/circular_sequences.py",
+    "lib/python3.13/site-packages/flye/short_plasmids/plasmids.py",
+    "lib/python3.13/site-packages/flye/short_plasmids/unmapped_reads.py",
+    "lib/python3.13/site-packages/flye/short_plasmids/utils.py",
+    "lib/python3.13/site-packages/flye/six.py",
+    "lib/python3.13/site-packages/flye/tests/__init__.py",
+    "lib/python3.13/site-packages/flye/tests/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/tests/__pycache__/test_toy.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/tests/data/ecoli_500kb.fasta",
+    "lib/python3.13/site-packages/flye/tests/data/ecoli_500kb_reads.fastq.gz",
+    "lib/python3.13/site-packages/flye/tests/data/ecoli_500kb_reads_hifi.fastq.gz",
+    "lib/python3.13/site-packages/flye/tests/test_toy.py",
+    "lib/python3.13/site-packages/flye/trestle/__init__.py",
+    "lib/python3.13/site-packages/flye/trestle/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/trestle/__pycache__/divergence.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/trestle/__pycache__/graph_resolver.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/trestle/__pycache__/trestle.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/trestle/__pycache__/trestle_config.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/trestle/divergence.py",
+    "lib/python3.13/site-packages/flye/trestle/graph_resolver.py",
+    "lib/python3.13/site-packages/flye/trestle/trestle.py",
+    "lib/python3.13/site-packages/flye/trestle/trestle_config.py",
+    "lib/python3.13/site-packages/flye/utils/__init__.py",
+    "lib/python3.13/site-packages/flye/utils/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/utils/__pycache__/bytes2human.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/utils/__pycache__/fasta_parser.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/utils/__pycache__/sam_parser.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/utils/__pycache__/utils.cpython-313.pyc",
+    "lib/python3.13/site-packages/flye/utils/bytes2human.py",
+    "lib/python3.13/site-packages/flye/utils/fasta_parser.py",
+    "lib/python3.13/site-packages/flye/utils/sam_parser.py",
+    "lib/python3.13/site-packages/flye/utils/utils.py"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/flye",
+        "prefix_placeholder": "/opt/conda/conda-bld/flye_1776053387346/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "a4ac5c20676ffc8d4a4b7e4e8126fc4b862d86d7c734607a5333775d897f9931",
+        "size_in_bytes": 462,
+        "sha256_in_prefix": "915d85eda223db3407b32a2177e3beb68aa76a51b828677642f59fc851ee373d"
+      },
+      {
+        "_path": "bin/flye-minimap2",
+        "path_type": "hardlink",
+        "sha256": "51533138c9dfae11b83436bd2ef12047af3d0c720f54b186890417f5c6bc0ff2",
+        "size_in_bytes": 1116000,
+        "sha256_in_prefix": "51533138c9dfae11b83436bd2ef12047af3d0c720f54b186890417f5c6bc0ff2"
+      },
+      {
+        "_path": "bin/flye-modules",
+        "path_type": "hardlink",
+        "sha256": "cb6634c442faf01189443302e0fe2fb6ed2ec327a72185499a66929dc14c3810",
+        "size_in_bytes": 39333032,
+        "sha256_in_prefix": "cb6634c442faf01189443302e0fe2fb6ed2ec327a72185499a66929dc14c3810"
+      },
+      {
+        "_path": "bin/flye-samtools",
+        "path_type": "hardlink",
+        "sha256": "c8e73f49d238fa4cf781541c949159fb20fad7cd3439ec67f40380583c0f69a7",
+        "size_in_bytes": 1231800,
+        "sha256_in_prefix": "c8e73f49d238fa4cf781541c949159fb20fad7cd3439ec67f40380583c0f69a7"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "e00794cde875ba944b0ebf9ac33ce2891fc972a6022d77457ca6e083ac086ad6",
+        "size_in_bytes": 399,
+        "sha256_in_prefix": "e00794cde875ba944b0ebf9ac33ce2891fc972a6022d77457ca6e083ac086ad6"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "273070d9342ce144341b6ce9a39fc5ab5b8f2f1d274ab97cd64cc3e51cb83aac",
+        "size_in_bytes": 7861,
+        "sha256_in_prefix": "273070d9342ce144341b6ce9a39fc5ab5b8f2f1d274ab97cd64cc3e51cb83aac"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "2226df5d8084c5c53be31ba3cd49c6b0bf301db61eb8b9110bf03a6b6d0c22f9",
+        "size_in_bytes": 78,
+        "sha256_in_prefix": "2226df5d8084c5c53be31ba3cd49c6b0bf301db61eb8b9110bf03a6b6d0c22f9"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "33bc8b912ab2fec3feff1459787f655052acbdf0fcb3245ee5e7193be7fb1501",
+        "size_in_bytes": 40,
+        "sha256_in_prefix": "33bc8b912ab2fec3feff1459787f655052acbdf0fcb3245ee5e7193be7fb1501"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "4f9dec19ee550db6190fd0d5416b5fd37587dedf2ca355a9091154fcdb691417",
+        "size_in_bytes": 1678,
+        "sha256_in_prefix": "4f9dec19ee550db6190fd0d5416b5fd37587dedf2ca355a9091154fcdb691417"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye-2.9.6.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "73669758dad56e999e173c9f8155d5644ab51f29f18e3ba948a1c90bc9c0358f",
+        "size_in_bytes": 119,
+        "sha256_in_prefix": "73669758dad56e999e173c9f8155d5644ab51f29f18e3ba948a1c90bc9c0358f"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__build__.py",
+        "path_type": "hardlink",
+        "sha256": "a610ecddb4f06420b2d64bed2ba6b80709eb680c81ad34458189b27399c6d920",
+        "size_in_bytes": 17,
+        "sha256_in_prefix": "a610ecddb4f06420b2d64bed2ba6b80709eb680c81ad34458189b27399c6d920"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__pycache__/__build__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "e9dd772f31137dd4623fea2be1d0d08bdb52b4e67d570cbf681534f93befe24c",
+        "size_in_bytes": 165,
+        "sha256_in_prefix": "e9dd772f31137dd4623fea2be1d0d08bdb52b4e67d570cbf681534f93befe24c"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "6aa0d855126070492ebd8cd9ba913f11abf91a30763195ecb9e11a0ffd624954",
+        "size_in_bytes": 142,
+        "sha256_in_prefix": "6aa0d855126070492ebd8cd9ba913f11abf91a30763195ecb9e11a0ffd624954"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__pycache__/__version__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f244607e5c7242f7e98719d97267dae26bcf9b252260cc2b9a0d1d08eb6b1904",
+        "size_in_bytes": 171,
+        "sha256_in_prefix": "f244607e5c7242f7e98719d97267dae26bcf9b252260cc2b9a0d1d08eb6b1904"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__pycache__/main.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "0982a2969e570e967716ec5ac149d0eaf8a1aeaac8d0cdc8b9848c949998f4b9",
+        "size_in_bytes": 43400,
+        "sha256_in_prefix": "0982a2969e570e967716ec5ac149d0eaf8a1aeaac8d0cdc8b9848c949998f4b9"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__pycache__/six.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "9aac922af6e1d232690248801b0b10110326fddc72c93ee8ff42463747b8417a",
+        "size_in_bytes": 40772,
+        "sha256_in_prefix": "9aac922af6e1d232690248801b0b10110326fddc72c93ee8ff42463747b8417a"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/__version__.py",
+        "path_type": "hardlink",
+        "sha256": "7b729b71dfa77aca30bd9a899ddb704c609e5845fe7070010046f93039896d48",
+        "size_in_bytes": 22,
+        "sha256_in_prefix": "7b729b71dfa77aca30bd9a899ddb704c609e5845fe7070010046f93039896d48"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d30b2de58a228267555b53ea512269bd4e558644d7bf14a537e9016863d77ae",
+        "size_in_bytes": 151,
+        "sha256_in_prefix": "6d30b2de58a228267555b53ea512269bd4e558644d7bf14a537e9016863d77ae"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/__pycache__/assemble.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "fb0b735528c7d8eff1b9c0b3b1ea87743e04652253910d3632c144656c562cc2",
+        "size_in_bytes": 3747,
+        "sha256_in_prefix": "fb0b735528c7d8eff1b9c0b3b1ea87743e04652253910d3632c144656c562cc2"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/__pycache__/repeat_graph.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "79aca7ffc1d26931dabd1c42b9138b02104755ad8177701658dde76b8453deec",
+        "size_in_bytes": 5064,
+        "sha256_in_prefix": "79aca7ffc1d26931dabd1c42b9138b02104755ad8177701658dde76b8453deec"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/__pycache__/scaffolder.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "c510e855d1525c75f264f6c94f20a915a1cf969496d3710751fbab9f8934572a",
+        "size_in_bytes": 11686,
+        "sha256_in_prefix": "c510e855d1525c75f264f6c94f20a915a1cf969496d3710751fbab9f8934572a"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/assemble.py",
+        "path_type": "hardlink",
+        "sha256": "f9278dc26a6715dd26046e7e431083da2763c89b095deaa2b6da1d3851e4838a",
+        "size_in_bytes": 2465,
+        "sha256_in_prefix": "f9278dc26a6715dd26046e7e431083da2763c89b095deaa2b6da1d3851e4838a"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/repeat_graph.py",
+        "path_type": "hardlink",
+        "sha256": "955ed8f65bd84b6f66ebb64352d86dddff81f638e27e4da9ba83e4eb101a4f40",
+        "size_in_bytes": 3312,
+        "sha256_in_prefix": "955ed8f65bd84b6f66ebb64352d86dddff81f638e27e4da9ba83e4eb101a4f40"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/assembly/scaffolder.py",
+        "path_type": "hardlink",
+        "sha256": "4847c6bbb04eb861a55b99eaa8a4ea8e811ab08c52cf8287649fab520b4f97f4",
+        "size_in_bytes": 8825,
+        "sha256_in_prefix": "4847c6bbb04eb861a55b99eaa8a4ea8e811ab08c52cf8287649fab520b4f97f4"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "6a919b6d301627eb0f7617ab132fc12266ca10f9d8f79973347e0090fcc3c5f6",
+        "size_in_bytes": 149,
+        "sha256_in_prefix": "6a919b6d301627eb0f7617ab132fc12266ca10f9d8f79973347e0090fcc3c5f6"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/__pycache__/configurator.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "76c7f40e8d38001cd69512ea5cae72532e76d3d30ef287450c3fdad3451d60a1",
+        "size_in_bytes": 5137,
+        "sha256_in_prefix": "76c7f40e8d38001cd69512ea5cae72532e76d3d30ef287450c3fdad3451d60a1"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/__pycache__/py_cfg.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "c4de0bf8f9eeb1259d9ba3d93ebac3dcc6ce05d5935150fb6638753b6f7b2fe5",
+        "size_in_bytes": 1636,
+        "sha256_in_prefix": "c4de0bf8f9eeb1259d9ba3d93ebac3dcc6ce05d5935150fb6638753b6f7b2fe5"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/asm_corrected_reads.cfg",
+        "path_type": "hardlink",
+        "sha256": "a890cc76e603f0b180cfb54ee22931733c9da5273b3743369f6a47cd0e42ea0d",
+        "size_in_bytes": 704,
+        "sha256_in_prefix": "a890cc76e603f0b180cfb54ee22931733c9da5273b3743369f6a47cd0e42ea0d"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/asm_defaults.cfg",
+        "path_type": "hardlink",
+        "sha256": "c7c0556a102f5013851c368a8c7d400669c0f0a7ff7da24afa95cedbc6dd9778",
+        "size_in_bytes": 841,
+        "sha256_in_prefix": "c7c0556a102f5013851c368a8c7d400669c0f0a7ff7da24afa95cedbc6dd9778"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/asm_hifi.cfg",
+        "path_type": "hardlink",
+        "sha256": "08fd5ec540bda842ed537dcbcd9d04bcad8512662578cfe47438022106ac5e53",
+        "size_in_bytes": 707,
+        "sha256_in_prefix": "08fd5ec540bda842ed537dcbcd9d04bcad8512662578cfe47438022106ac5e53"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/asm_nano_hq.cfg",
+        "path_type": "hardlink",
+        "sha256": "3060bf41aebe196bf68084b57d8117f9a864ee72f89e951f839824d78b752707",
+        "size_in_bytes": 706,
+        "sha256_in_prefix": "3060bf41aebe196bf68084b57d8117f9a864ee72f89e951f839824d78b752707"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg",
+        "path_type": "hardlink",
+        "sha256": "9120685123b0250c37cb31e085f272bbefee045bfbf8e7d0a77fe64a3bca1264",
+        "size_in_bytes": 685,
+        "sha256_in_prefix": "9120685123b0250c37cb31e085f272bbefee045bfbf8e7d0a77fe64a3bca1264"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/asm_subasm.cfg",
+        "path_type": "hardlink",
+        "sha256": "0eb366b9a6cd530739990eb13a645dfc57d81e6b5640418c56ba2652ef14de76",
+        "size_in_bytes": 704,
+        "sha256_in_prefix": "0eb366b9a6cd530739990eb13a645dfc57d81e6b5640418c56ba2652ef14de76"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_g36_homopolymers.mat",
+        "path_type": "hardlink",
+        "sha256": "9096866c9336d1a81d36f09af4d803d2d9f45f204eb50e7bd0a801275194fa8c",
+        "size_in_bytes": 1324605,
+        "sha256_in_prefix": "9096866c9336d1a81d36f09af4d803d2d9f45f204eb50e7bd0a801275194fa8c"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_g36_substitutions.mat",
+        "path_type": "hardlink",
+        "sha256": "14078578680fdf19dd2101124700a8b4c529987c1f60806f2b9da3b44095b6be",
+        "size_in_bytes": 700,
+        "sha256_in_prefix": "14078578680fdf19dd2101124700a8b4c529987c1f60806f2b9da3b44095b6be"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_homopolymers.mat",
+        "path_type": "hardlink",
+        "sha256": "ed2c648ada11e765a30b323771fd13978a1b16e08ae84d755f1cc46bccee07b9",
+        "size_in_bytes": 184321,
+        "sha256_in_prefix": "ed2c648ada11e765a30b323771fd13978a1b16e08ae84d755f1cc46bccee07b9"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/nano_r94_substitutions.mat",
+        "path_type": "hardlink",
+        "sha256": "bb2ec893e6af6a1f5df0e4eb1d00833797621b9697424dc4c02257a46b0ae2f1",
+        "size_in_bytes": 581,
+        "sha256_in_prefix": "bb2ec893e6af6a1f5df0e4eb1d00833797621b9697424dc4c02257a46b0ae2f1"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_chm13_homopolymers.mat",
+        "path_type": "hardlink",
+        "sha256": "79c451985a212fe21154725756e5f18dbecec0d55d86df52ae5ed78e147f64f5",
+        "size_in_bytes": 15785058,
+        "sha256_in_prefix": "79c451985a212fe21154725756e5f18dbecec0d55d86df52ae5ed78e147f64f5"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_chm13_substitutions.mat",
+        "path_type": "hardlink",
+        "sha256": "88dcc50bb63dc17691057314f3c746f4a872bdf1d3696fabd081d5e6db430346",
+        "size_in_bytes": 582,
+        "sha256_in_prefix": "88dcc50bb63dc17691057314f3c746f4a872bdf1d3696fabd081d5e6db430346"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_homopolymers.mat",
+        "path_type": "hardlink",
+        "sha256": "11000c2c2e80bcd12bb30e4f5945294ce99d3997255ebbbde9676d4c464402bf",
+        "size_in_bytes": 813265,
+        "sha256_in_prefix": "11000c2c2e80bcd12bb30e4f5945294ce99d3997255ebbbde9676d4c464402bf"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/bin_cfg/pacbio_substitutions.mat",
+        "path_type": "hardlink",
+        "sha256": "1233fd5c5011468575de7425cadce7bacc81a6d1e7527dcfe73c7a6746d95df3",
+        "size_in_bytes": 513,
+        "sha256_in_prefix": "1233fd5c5011468575de7425cadce7bacc81a6d1e7527dcfe73c7a6746d95df3"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/configurator.py",
+        "path_type": "hardlink",
+        "sha256": "ce0a7f34a1656e85c8d18591fe0e5b71c7099efd23cc840588a8be7e6d27ae79",
+        "size_in_bytes": 4133,
+        "sha256_in_prefix": "ce0a7f34a1656e85c8d18591fe0e5b71c7099efd23cc840588a8be7e6d27ae79"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/config/py_cfg.py",
+        "path_type": "hardlink",
+        "sha256": "0a96ea5e424037953e73ebc91e3edc55dda509802da5474fd148580da6668705",
+        "size_in_bytes": 2147,
+        "sha256_in_prefix": "0a96ea5e424037953e73ebc91e3edc55dda509802da5474fd148580da6668705"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/main.py",
+        "path_type": "hardlink",
+        "sha256": "9fa37d47e9b7c4c0d9543c94aa6c59eb2a564c11bc36e54aab5feb22f4a221ab",
+        "size_in_bytes": 32881,
+        "sha256_in_prefix": "9fa37d47e9b7c4c0d9543c94aa6c59eb2a564c11bc36e54aab5feb22f4a221ab"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "ffaf7c493fc6dee8a0185fe6d5e40d2329f27b4f54d87cd3734c46ce51216e3c",
+        "size_in_bytes": 152,
+        "sha256_in_prefix": "ffaf7c493fc6dee8a0185fe6d5e40d2329f27b4f54d87cd3734c46ce51216e3c"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/__pycache__/alignment.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "d9f8ab472fb07731d04addc2eec19fcdc02f76a6039407770ec8d33b3b8875f0",
+        "size_in_bytes": 12080,
+        "sha256_in_prefix": "d9f8ab472fb07731d04addc2eec19fcdc02f76a6039407770ec8d33b3b8875f0"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/__pycache__/bubbles.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "002be31c6bcbc49b82a865682c34a02ff743a2a265590b955dee38f2acb124d2",
+        "size_in_bytes": 19013,
+        "sha256_in_prefix": "002be31c6bcbc49b82a865682c34a02ff743a2a265590b955dee38f2acb124d2"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/__pycache__/consensus.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "91f7dbbc0f12d384a47f076226aec518fd32ecb38af686aae951471e73349abf",
+        "size_in_bytes": 7483,
+        "sha256_in_prefix": "91f7dbbc0f12d384a47f076226aec518fd32ecb38af686aae951471e73349abf"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/__pycache__/polish.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "40a43a61bbbb6f6fa0e0f8233a1a342cc8265aa3c669a8c9509ce8466fc4f04e",
+        "size_in_bytes": 16345,
+        "sha256_in_prefix": "40a43a61bbbb6f6fa0e0f8233a1a342cc8265aa3c669a8c9509ce8466fc4f04e"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/alignment.py",
+        "path_type": "hardlink",
+        "sha256": "3862efb29d4e64d89b10f01c935d19e763eb15de53580506f6ec7f784254e4e7",
+        "size_in_bytes": 10577,
+        "sha256_in_prefix": "3862efb29d4e64d89b10f01c935d19e763eb15de53580506f6ec7f784254e4e7"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/bubbles.py",
+        "path_type": "hardlink",
+        "sha256": "8f6b58606dafdf5a5b80264caaaed1a2290e03ff0d03a2111dcd82f191f84773",
+        "size_in_bytes": 17320,
+        "sha256_in_prefix": "8f6b58606dafdf5a5b80264caaaed1a2290e03ff0d03a2111dcd82f191f84773"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/consensus.py",
+        "path_type": "hardlink",
+        "sha256": "e2fc9b61072a14a1a6723759707173f2c337bc28643dfc1dcd2de047a06fb749",
+        "size_in_bytes": 5893,
+        "sha256_in_prefix": "e2fc9b61072a14a1a6723759707173f2c337bc28643dfc1dcd2de047a06fb749"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/polishing/polish.py",
+        "path_type": "hardlink",
+        "sha256": "c1ab3569740f19872a9a8fe2b7bc182ffae7534772d704486270e110f6cfb27e",
+        "size_in_bytes": 12862,
+        "sha256_in_prefix": "c1ab3569740f19872a9a8fe2b7bc182ffae7534772d704486270e110f6cfb27e"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/repeat_graph/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/repeat_graph/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "2625d8a6a8b7863f72c55c4b946b31567ef6cbd61c4c40656bc928cd0d27569d",
+        "size_in_bytes": 155,
+        "sha256_in_prefix": "2625d8a6a8b7863f72c55c4b946b31567ef6cbd61c4c40656bc928cd0d27569d"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/repeat_graph/__pycache__/graph_alignment.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "d7d3fa15827e2ebe85c8f2508a9fb61c0990ebecc454023bbeb6a68ef8e2aaa3",
+        "size_in_bytes": 3336,
+        "sha256_in_prefix": "d7d3fa15827e2ebe85c8f2508a9fb61c0990ebecc454023bbeb6a68ef8e2aaa3"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/repeat_graph/__pycache__/repeat_graph.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "68a60cbd9bc48f71ad8656313a353001a802c9493e6e124b94a493b7f016ed4f",
+        "size_in_bytes": 14975,
+        "sha256_in_prefix": "68a60cbd9bc48f71ad8656313a353001a802c9493e6e124b94a493b7f016ed4f"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/repeat_graph/graph_alignment.py",
+        "path_type": "hardlink",
+        "sha256": "55d62b64fb7dd9db7f83a826518cf352463fe5b58be182ce219e2a21c8696387",
+        "size_in_bytes": 2758,
+        "sha256_in_prefix": "55d62b64fb7dd9db7f83a826518cf352463fe5b58be182ce219e2a21c8696387"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/repeat_graph/repeat_graph.py",
+        "path_type": "hardlink",
+        "sha256": "c55c32ed381e9efd9a00079648df6ca119a13c7811ca0eb6f408315a450d9ceb",
+        "size_in_bytes": 10452,
+        "sha256_in_prefix": "c55c32ed381e9efd9a00079648df6ca119a13c7811ca0eb6f408315a450d9ceb"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f4c682ca80506b590f2d3604d9a1a682b69dd7ac5dce2399fec4ecfe56a9db9a",
+        "size_in_bytes": 157,
+        "sha256_in_prefix": "f4c682ca80506b590f2d3604d9a1a682b69dd7ac5dce2399fec4ecfe56a9db9a"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/circular_sequences.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "874790d0937b71b627f637e4a7e6cf2acfac02189ed7612956c2874c44624909",
+        "size_in_bytes": 8143,
+        "sha256_in_prefix": "874790d0937b71b627f637e4a7e6cf2acfac02189ed7612956c2874c44624909"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/plasmids.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "35441b41fc113a0164c2e4276a6f1935d5b73e763707bd1d4e3bd760fb91c8f4",
+        "size_in_bytes": 6959,
+        "sha256_in_prefix": "35441b41fc113a0164c2e4276a6f1935d5b73e763707bd1d4e3bd760fb91c8f4"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/unmapped_reads.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "469e56b9b41ad768253e93af481c3bc1682f44b1c26d41076e39547fa8b59eb8",
+        "size_in_bytes": 4302,
+        "sha256_in_prefix": "469e56b9b41ad768253e93af481c3bc1682f44b1c26d41076e39547fa8b59eb8"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/__pycache__/utils.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "1e8c75eb167c56a34eb3a3641facfbe19d066753e920bd93680c467fc42dad51",
+        "size_in_bytes": 1384,
+        "sha256_in_prefix": "1e8c75eb167c56a34eb3a3641facfbe19d066753e920bd93680c467fc42dad51"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/circular_sequences.py",
+        "path_type": "hardlink",
+        "sha256": "f95fea218f9695792bb8397740009ecdd2fd2a2e6bd98fa6426e96f06960684d",
+        "size_in_bytes": 6871,
+        "sha256_in_prefix": "f95fea218f9695792bb8397740009ecdd2fd2a2e6bd98fa6426e96f06960684d"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/plasmids.py",
+        "path_type": "hardlink",
+        "sha256": "b07709cefcf60232c0aa7b216ea34f977c4fc3e4a62492088df02fef090bfc56",
+        "size_in_bytes": 5359,
+        "sha256_in_prefix": "b07709cefcf60232c0aa7b216ea34f977c4fc3e4a62492088df02fef090bfc56"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/unmapped_reads.py",
+        "path_type": "hardlink",
+        "sha256": "7419b3b45b3f1ea61092d1d1bfb5ed8e400351af90f13a1f9014beb8fa3701e8",
+        "size_in_bytes": 2934,
+        "sha256_in_prefix": "7419b3b45b3f1ea61092d1d1bfb5ed8e400351af90f13a1f9014beb8fa3701e8"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/short_plasmids/utils.py",
+        "path_type": "hardlink",
+        "sha256": "733eecd79a5563b0dd51436193f89ba2cf9dc4c94160e08d3a7d02ebfa0ccf99",
+        "size_in_bytes": 1013,
+        "sha256_in_prefix": "733eecd79a5563b0dd51436193f89ba2cf9dc4c94160e08d3a7d02ebfa0ccf99"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/six.py",
+        "path_type": "hardlink",
+        "sha256": "e1ea83af7daa877bd33b7938437910ed1c26642bcd14222e5ccc5e82ff68b120",
+        "size_in_bytes": 32841,
+        "sha256_in_prefix": "e1ea83af7daa877bd33b7938437910ed1c26642bcd14222e5ccc5e82ff68b120"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "171a843d9aee043044f251da2c3830d9eb57403135b1321a4a8493d9eb9a71a8",
+        "size_in_bytes": 148,
+        "sha256_in_prefix": "171a843d9aee043044f251da2c3830d9eb57403135b1321a4a8493d9eb9a71a8"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/__pycache__/test_toy.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "e056686704d231fd4aa783d42362db0bd472c973b214fec2c46ea0ae6c89eb9b",
+        "size_in_bytes": 1574,
+        "sha256_in_prefix": "e056686704d231fd4aa783d42362db0bd472c973b214fec2c46ea0ae6c89eb9b"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/data/ecoli_500kb.fasta",
+        "path_type": "hardlink",
+        "sha256": "de2efb0bdf2e880b769b53777fd6d300cf8b65a82dbb42ca6c8a0d279a97aa76",
+        "size_in_bytes": 425872,
+        "sha256_in_prefix": "de2efb0bdf2e880b769b53777fd6d300cf8b65a82dbb42ca6c8a0d279a97aa76"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/data/ecoli_500kb_reads.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "65b7cbd9fb7ce90958d821d85c96ea078ee3ed4d446e02a07a9c1d29767dcbe2",
+        "size_in_bytes": 7315012,
+        "sha256_in_prefix": "65b7cbd9fb7ce90958d821d85c96ea078ee3ed4d446e02a07a9c1d29767dcbe2"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/data/ecoli_500kb_reads_hifi.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e938e20745e19abe6b3b31f58103501b68628d66730f0eb7dcbcf5d7e566c707",
+        "size_in_bytes": 9836635,
+        "sha256_in_prefix": "e938e20745e19abe6b3b31f58103501b68628d66730f0eb7dcbcf5d7e566c707"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/tests/test_toy.py",
+        "path_type": "hardlink",
+        "sha256": "8149033797ba2e7948aa994fd732bca60c21df0c207bdb6fb24dd065e7c88dad",
+        "size_in_bytes": 861,
+        "sha256_in_prefix": "8149033797ba2e7948aa994fd732bca60c21df0c207bdb6fb24dd065e7c88dad"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "33a595bff84016203387f6e129d9d74b85d70c146236f65d0ab7ef49d0453b50",
+        "size_in_bytes": 150,
+        "sha256_in_prefix": "33a595bff84016203387f6e129d9d74b85d70c146236f65d0ab7ef49d0453b50"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/__pycache__/divergence.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "424c8b3755262b61c6b2c1dc58a5420b591b33bfdb7bfcc8f30f97bc94d60593",
+        "size_in_bytes": 20192,
+        "sha256_in_prefix": "424c8b3755262b61c6b2c1dc58a5420b591b33bfdb7bfcc8f30f97bc94d60593"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/__pycache__/graph_resolver.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "821586ae5f57677cfd169dc22a859c93342b8c69846d2b743320bc667287464d",
+        "size_in_bytes": 10541,
+        "sha256_in_prefix": "821586ae5f57677cfd169dc22a859c93342b8c69846d2b743320bc667287464d"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/__pycache__/trestle.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "350e687b988e6907e73d20dbf32f77f8ea0f1cf5ea6d58952c835f1dd99d04c2",
+        "size_in_bytes": 132000,
+        "sha256_in_prefix": "350e687b988e6907e73d20dbf32f77f8ea0f1cf5ea6d58952c835f1dd99d04c2"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/__pycache__/trestle_config.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "99020a6b21467658a2b30e3af8807d6e26ebca3b98a5da1100a19feb47526b2b",
+        "size_in_bytes": 874,
+        "sha256_in_prefix": "99020a6b21467658a2b30e3af8807d6e26ebca3b98a5da1100a19feb47526b2b"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/divergence.py",
+        "path_type": "hardlink",
+        "sha256": "26530f8436ff09cf6cab1547ef77aea657523fbadc9760839b03e0fbc4b258fa",
+        "size_in_bytes": 15601,
+        "sha256_in_prefix": "26530f8436ff09cf6cab1547ef77aea657523fbadc9760839b03e0fbc4b258fa"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/graph_resolver.py",
+        "path_type": "hardlink",
+        "sha256": "f868b977df0ddedb38f433da6ddc2ab8b393e75c34142eb6168f423c125c146c",
+        "size_in_bytes": 7858,
+        "sha256_in_prefix": "f868b977df0ddedb38f433da6ddc2ab8b393e75c34142eb6168f423c125c146c"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/trestle.py",
+        "path_type": "hardlink",
+        "sha256": "b96ddc50727d5c5af719b5c2d481def51f8bf0b3bf4b621af68ec63c7e90521f",
+        "size_in_bytes": 139095,
+        "sha256_in_prefix": "b96ddc50727d5c5af719b5c2d481def51f8bf0b3bf4b621af68ec63c7e90521f"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/trestle/trestle_config.py",
+        "path_type": "hardlink",
+        "sha256": "f0fa859d09041026e0f552de38cf038fc3e28999891d11398da6d7f89dc20750",
+        "size_in_bytes": 694,
+        "sha256_in_prefix": "f0fa859d09041026e0f552de38cf038fc3e28999891d11398da6d7f89dc20750"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "ae523d59b7935908d0699050a1fe3d16afe1d04b8cd7f932c58a5f4b0df5825c",
+        "size_in_bytes": 148,
+        "sha256_in_prefix": "ae523d59b7935908d0699050a1fe3d16afe1d04b8cd7f932c58a5f4b0df5825c"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/__pycache__/bytes2human.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "ec0c143cb964ed897f0a3eb23d5256eaeb73debd697d9637832fef3eb5cd9114",
+        "size_in_bytes": 3943,
+        "sha256_in_prefix": "ec0c143cb964ed897f0a3eb23d5256eaeb73debd697d9637832fef3eb5cd9114"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/__pycache__/fasta_parser.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "96ab449a37df4552501b9e775271dbecd6fe843195eabf71785d4b78710b709d",
+        "size_in_bytes": 8178,
+        "sha256_in_prefix": "96ab449a37df4552501b9e775271dbecd6fe843195eabf71785d4b78710b709d"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/__pycache__/sam_parser.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "e769fac0f3afe46d576167642ac7b4f6ca8e7bb0038e3e4d4bd5eea1a3515968",
+        "size_in_bytes": 19907,
+        "sha256_in_prefix": "e769fac0f3afe46d576167642ac7b4f6ca8e7bb0038e3e4d4bd5eea1a3515968"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/__pycache__/utils.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "b4e74be8489a854a4ce8e130fab726a2f215a8b806f17448ba25b6715ba06776",
+        "size_in_bytes": 3302,
+        "sha256_in_prefix": "b4e74be8489a854a4ce8e130fab726a2f215a8b806f17448ba25b6715ba06776"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/bytes2human.py",
+        "path_type": "hardlink",
+        "sha256": "788e2701ab7c35d389be734e850bf8652b5f6294a781acf4e924b5f3fe129710",
+        "size_in_bytes": 3494,
+        "sha256_in_prefix": "788e2701ab7c35d389be734e850bf8652b5f6294a781acf4e924b5f3fe129710"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/fasta_parser.py",
+        "path_type": "hardlink",
+        "sha256": "ef477d6ab33092d726dc98ded580b7c3c7c76b97db70852509158c008bcdc158",
+        "size_in_bytes": 6329,
+        "sha256_in_prefix": "ef477d6ab33092d726dc98ded580b7c3c7c76b97db70852509158c008bcdc158"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/sam_parser.py",
+        "path_type": "hardlink",
+        "sha256": "815dd2f91e0b9a65c93bc4aed4dbfcbd3621f840087c2130ea22bb3665e8dce5",
+        "size_in_bytes": 17659,
+        "sha256_in_prefix": "815dd2f91e0b9a65c93bc4aed4dbfcbd3621f840087c2130ea22bb3665e8dce5"
+      },
+      {
+        "_path": "lib/python3.13/site-packages/flye/utils/utils.py",
+        "path_type": "hardlink",
+        "sha256": "d763538df3481b648870eb1f6f012d85782dc796fe85ce2e2b43487b4d9efe88",
+        "size_in_bytes": 1970,
+        "sha256_in_prefix": "d763538df3481b648870eb1f6f012d85782dc796fe85ce2e2b43487b4d9efe88"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/nikita/.conda/pkgs/flye-2.9.6-py313h7fbb527_1",
+    "type": 1
+  }
+}

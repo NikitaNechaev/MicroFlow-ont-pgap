@@ -4,7 +4,7 @@
 raw_data_dir: "raw_data"
 
 # Output base directory
-output_dir: "../results"
+output_dir: "results"
 
 # Scripts directory
 scripts_dir: "scripts"
@@ -38,6 +38,7 @@ resources:
 # Parameters for tools
 flye:
   genome_size: "8m"  # Example for bacterial genome, adjust as needed
+  extra: ""  # Additional flye parameters
   # Other flye parameters can be added here
 
 filtlong:
