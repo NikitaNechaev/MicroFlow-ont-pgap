@@ -1,0 +1,26 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-06-12 23:43:48
+  Workflow ID: d9331ae2-e24a-4f81-804b-9a8f008b46ad
+  Platform: Linux-6.12.91-1-MANJARO-x86_64-with-glibc2.43
+  Host: ThinkPad-T14-gen3
+  User: nikita
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /home/nikita/anaconda3/envs/snakemake/bin/snakemake --cores 10
+  Snakefile: /home/nikita/Code/Snakemake/Snakefile
+  Base directory: /home/nikita/Code/Snakemake
+  Run directory: /home/nikita/Code/Snakemake
+  Working directory: /home/nikita/Code/Snakemake
+  Config file(s): ['config.yaml']
+  Config MD5: 845b02d1733a0332be029ff738a6f51c
+
+Building DAG of jobs...
+MissingInputException in rule parse_taxcheck in file "/home/nikita/Code/Snakemake/Snakefile", line 114:
+Missing input files for rule parse_taxcheck:
+    output: results/005_taxcheck/E20P1/species_name.txt
+    wildcards: strain=E20P1
+    affected files:
+        results/005_taxcheck/E20P1/ani-tax-report.txt

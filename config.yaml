@@ -20,24 +20,25 @@ threads:
 # Resources (for cluster execution, adjust as needed)
 resources:
   merge:
-    mem_mb: 1000
+    mem_mb: 80000
     time_min: 30
   flye:
-    mem_mb: 32000
+    mem_mb: 80000
     time_min: 1440  # 24 hours
   filtlong:
-    mem_mb: 8000
+    mem_mb: 80000
     time_min: 60
   taxcheck:
-    mem_mb: 4000
+    mem_mb: 80000
     time_min: 60
   pgap:
-    mem_mb: 16000
+    mem_mb: 80000
     time_min: 1440  # 24 hours
 
 # Parameters for tools
 flye:
   genome_size: "5m"  # Example for bacterial genome, adjust as needed
+  extra: ""  # Additional flye parameters
   # Other flye parameters can be added here
 
 filtlong:

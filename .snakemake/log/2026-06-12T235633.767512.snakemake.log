@@ -1,0 +1,45 @@
+Assuming unrestricted shared filesystem usage.
+Falling back to greedy scheduler because no ILP solver is found (you have to install pulp and either coincbc or glpk).
+
+SNAKEMAKE
+=========
+  Date: 2026-06-12 23:56:33
+  Workflow ID: 09acff48-8c59-436d-acf2-2d95a331b6e6
+  Platform: Linux-6.12.91-1-MANJARO-x86_64-with-glibc2.43
+  Host: ThinkPad-T14-gen3
+  User: nikita
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /home/nikita/anaconda3/envs/snakemake/bin/snakemake --cores 10 results/005_taxcheck/E20P1/species_name.txt
+  Snakefile: /home/nikita/Code/Snakemake/Snakefile
+  Base directory: /home/nikita/Code/Snakemake
+  Run directory: /home/nikita/Code/Snakemake
+  Working directory: /home/nikita/Code/Snakemake
+  Config file(s): ['config.yaml']
+  Config MD5: 845b02d1733a0332be029ff738a6f51c
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                   count
+------------------  -------
+merge                     1
+flye1                     1
+parse_flye1_length        1
+filtlong                  1
+flye2                     1
+taxcheck                  1
+parse_taxcheck            1
+total                     7
+
+Select jobs to execute...
+Execute 1 jobs...
+RuleException in rule merge in file "/home/nikita/Code/Snakemake/Snakefile", line 12:
+AttributeError: module 'posixpath' has no attribute 'dirname(output', when formatting the following:
+
+        mkdir -p {os.path.dirname(output[0])}
+        cat {input} > {output}
+        
