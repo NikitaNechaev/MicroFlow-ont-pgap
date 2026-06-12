@@ -1,0 +1,7 @@
+name: ncbi-pgap
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - ncbi-pgap=2022-09-28.001
+  - python=3.8

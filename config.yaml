@@ -1,0 +1,61 @@
+# Global configuration for the bacterial genome assembly and annotation pipeline
+
+# Directory where raw data is stored
+raw_data_dir: "raw_data"
+
+# Output base directory
+output_dir: "results"
+
+# Scripts directory
+scripts_dir: "scripts"
+
+# Threads and resources
+threads:
+  merge: 2
+  flye: 8
+  filtlong: 4
+  taxcheck: 2
+  pgap: 8
+
+# Resources (for cluster execution, adjust as needed)
+resources:
+  merge:
+    mem_mb: 1000
+    time_min: 30
+  flye:
+    mem_mb: 32000
+    time_min: 1440  # 24 hours
+  filtlong:
+    mem_mb: 8000
+    time_min: 60
+  taxcheck:
+    mem_mb: 4000
+    time_min: 60
+  pgap:
+    mem_mb: 16000
+    time_min: 1440  # 24 hours
+
+# Parameters for tools
+flye:
+  genome_size: "5m"  # Example for bacterial genome, adjust as needed
+  # Other flye parameters can be added here
+
+filtlong:
+  # Parameters for filtlong, note that --keep_bases will be set dynamically
+  min_length: 1000
+  keep_percent: 90
+  # Multiplier for target bases calculation (max_contig_length * multiplier)
+  target_base_multiplier: 120
+
+# Taxcheck and PGAP parameters
+taxcheck:
+  # Additional parameters for pgap.py --taxcheck-only if needed
+  pass
+
+pgap:
+  # Additional parameters for pgap.py annotation
+  force: false  # Example, set to true to force overwrite
+  # Consider using Docker for PGAP if native installation is problematic
+  use_docker: false
+  docker_image: "ncbi/pgap:latest"
+  docker_options: "--rm -v $(pwd):/data"
