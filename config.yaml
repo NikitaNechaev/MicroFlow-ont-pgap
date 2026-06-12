@@ -4,18 +4,18 @@
 raw_data_dir: "raw_data"
 
 # Output base directory
-output_dir: "results"
+output_dir: "../results"
 
 # Scripts directory
 scripts_dir: "scripts"
 
 # Threads and resources
 threads:
-  merge: 2
-  flye: 8
-  filtlong: 4
-  taxcheck: 2
-  pgap: 8
+  merge: 15
+  flye: 15
+  filtlong: 15
+  taxcheck: 15
+  pgap: 15
 
 # Resources (for cluster execution, adjust as needed)
 resources:
@@ -37,8 +37,7 @@ resources:
 
 # Parameters for tools
 flye:
-  genome_size: "5m"  # Example for bacterial genome, adjust as needed
-  extra: ""  # Additional flye parameters
+  genome_size: "8m"  # Example for bacterial genome, adjust as needed
   # Other flye parameters can be added here
 
 filtlong:
