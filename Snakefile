@@ -1,26 +1,19 @@
-# Snakefile for bacterial genome assembly and annotation pipeline
-
 import os
 import glob
 
-# Load config
 configfile: "config.yaml"
 
-# Wildcards for strains
 STRAINS = glob_wildcards(config["raw_data_dir"] + "/{strain}/").strain
 
-# Rule all: aggregate final outputs
 rule all:
     input:
         expand("results/006_pgap/{strain}/pgap_output", strain=STRAINS)
 
-# Rule merge: combine raw reads for each strain
 rule merge:
     input:
-        # Function to collect all fastq.gz files for a given strain
         lambda wildcards: glob.glob(os.path.join(config["raw_data_dir"], wildcards.strain, "*.fastq.gz"))
     output:
-        "results/001_merge/{strain}/merged.fastq.gz"
+        "results/000_merge/{strain}/merged.fastq.gz"
     threads: config["threads"]["merge"]
     resources:
         mem_mb=config["resources"]["merge"]["mem_mb"],
@@ -28,18 +21,30 @@ rule merge:
     shell:
         """
         mkdir -p {output[0].parent}
-        # TODO: Implement bash logic to merge FASTQ files
-        # Example: cat {input} > {output}
-        # Or use seqkit concat: seqkit concat {input} -o {output}
+        cat {input} > {output}
         """
 
-# Rule flye1: initial assembly with Flye
+rule nanoplot:
+    input:
+        "results/000_merge/{strain}/merged.fastq.gz"
+    output:
+        "results/001_nanoplot/{strain}/nanoplot_report.html"
+    threads: 1
+    resources:
+        mem_mb=1000
+        time_min=30
+    shell:
+        """
+        mkdir -p {output[0].parent}
+        Nanoplot --fastq {input} --outdir {output[0].parent} --threads {threads}
+        """
+
 rule flye1:
     input:
-        "results/001_merge/{strain}/merged.fastq.gz"
+        "results/000_merge/{strain}/merged.fastq.gz"
     output:
-        assembly="results/002_flye1/{strain}/assembly.fasta",
-        log="results/002_flye1/{strain}/flye.log"
+        assembly="results/003_flye1/{strain}/assembly.fasta",
+        log="results/003_flye1/{strain}/flye.log"
     threads: config["threads"]["flye"]
     resources:
         mem_mb=config["resources"]["flye"]["mem_mb"],
@@ -49,17 +54,14 @@ rule flye1:
     shell:
         """
         mkdir -p {output.assembly.parent}
-        # TODO: Implement Flye command
-        # Example: flye --nano-raw {input} --out-dir {output.assembly.parent} --threads {threads} {config[flye].extra}
-        # Note: Adjust parameters as needed, e.g., genome size
+        flye --nano-raw {input} --out-dir {output.assembly.parent} --threads {threads} {config[flye].extra} --meta
         """
 
-# Rule parse_flye1_length: extract max contig length from assembly
 rule parse_flye1_length:
     input:
-        "results/002_flye1/{strain}/assembly.fasta"
+        "results/003_flye1/{strain}/assembly.fasta"
     output:
-        "results/002_flye1/{strain}/max_contig_length.txt"
+        "results/003_flye1/{strain}/max_contig_length.txt"
     threads: 1
     resources:
         mem_mb=config["resources"]["merge"]["mem_mb"],  # small job
@@ -70,10 +72,9 @@ rule parse_flye1_length:
         python scripts/get_max_contig_length.py {input} {output}
         """
 
-# Rule filtlong: filter reads based on max contig length
 rule filtlong:
     input:
-        reads="results/001_merge/{strain}/merged.fastq.gz",
+        reads="results/000_merge/{strain}/merged.fastq.gz",
         max_len="results/002_flye1/{strain}/max_contig_length.txt"
     output:
         "results/003_filtlong/{strain}/filtered.fastq.gz"
@@ -84,16 +85,13 @@ rule filtlong:
     conda:
         "envs/filtlong.yaml"
     params:
-        # Function to compute keep_bases from max_contig_length.txt using multiplier from config
         keep_bases=lambda wildcards: int(open("results/002_flye1/{strain}/max_contig_length.txt".format(strain=wildcards.strain)).read().strip()) * config["filtlong"]["target_base_multiplier"]
     shell:
         """
         mkdir -p {output[0].parent}
-        # TODO: Implement filtlong command
-        # Example: filtlong --target_bases {params.keep_bases} --min_length {config[filtlong].min_length} --keep_percent {config[filtlong].keep_percent} {input.reads} > {output}
+        filtlong --target_bases {params.keep_bases} --min_length {config[filtlong].min_length} --keep_percent {config[filtlong].keep_percent} {input.reads} > {output}
         """
 
-# Rule flye2: final assembly with Flye on filtered reads
 rule flye2:
     input:
         "results/003_filtlong/{strain}/filtered.fastq.gz"
@@ -108,11 +106,9 @@ rule flye2:
     shell:
         """
         mkdir -p {output[0].parent}
-        # TODO: Implement Flye command (similar to flye1 but on filtered reads)
-        # Example: flye --nano-raw {input} --out-dir {output[0].parent} --threads {threads} {config[flye].extra}
+        flye --nano-hq {input} --out-dir {output[0].parent} --threads {threads} {config[flye].extra}
         """
 
-# Rule taxcheck: run taxcheck on assembly
 rule taxcheck:
     input:
         "results/004_flye2/{strain}/final_assembly.fasta"
@@ -123,15 +119,13 @@ rule taxcheck:
         mem_mb=config["resources"]["taxcheck"]["mem_mb"],
         time_min=config["resources"]["taxcheck"]["time_min"]
     conda:
-        "envs/ncbi-pgap.yaml"
+        "base"
     shell:
         """
         mkdir -p {output[0].parent}
-        # TODO: Implement pgap.py taxcheck-only command
-        # Example: pgap.py --taxcheck-only {input} --output {output[0].parent}
+        {config[pgap][pgap_path]} --taxcheck-only {input} --output {output[0].parent}
         """
 
-# Rule parse_taxcheck: extract species name from taxcheck report
 rule parse_taxcheck:
     input:
         "results/005_taxcheck/{strain}/taxcheck_report.txt"
@@ -147,7 +141,6 @@ rule parse_taxcheck:
         python scripts/get_species_name.py {input} {output}
         """
 
-# Rule pgap_annotation: run full PGAP annotation
 rule pgap_annotation:
     input:
         fasta="results/004_flye2/{strain}/final_assembly.fasta",
@@ -159,18 +152,15 @@ rule pgap_annotation:
         mem_mb=config["resources"]["pgap"]["mem_mb"],
         time_min=config["resources"]["pgap"]["time_min"]
     conda:
-        "envs/ncbi-pgap.yaml"
+        "base"
     params:
-        # Function to read species name from file
         species_name=lambda wildcards: open("results/005_taxcheck/{strain}/species_name.txt".format(strain=wildcards.strain)).read().strip()
     shell:
         """
         mkdir -p {output}
-        # TODO: Implement full pgap.py annotation command
-        # Example with Docker support:
-        # if {config[pgap][use_docker]}; then
-        #   docker run {config[pgap][docker_options]} {config[pgap][docker_image]} pgap.py -t {threads} -o {output} -s {params.species_name} {input.fasta}
-        # else
-        #   pgap.py -t {threads} -o {output} -s {params.species_name} {input.fasta}
-        # fi
+        if {config[pgap][use_docker]}; then
+          docker run {config[pgap][docker_options]} {config[pgap][docker_image]} {config[pgap][pgap_path]} -t {threads} -o {output} -s {params.species_name} {input.fasta}
+        else
+          {config[pgap][pgap_path]} -t {threads} -o {output} -s {params.species_name} {input.fasta}
+        fi
         """

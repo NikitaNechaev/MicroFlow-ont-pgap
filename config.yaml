@@ -59,3 +59,5 @@ pgap:
   use_docker: false
   docker_image: "ncbi/pgap:latest"
   docker_options: "--rm -v $(pwd):/data"
+  # Full path to pgap.py executable
+  pgap_path: "/home/user/WorkDir/PGAP/pgap.py"
