@@ -123,12 +123,12 @@ rule taxcheck:
     shell:
         """
         mkdir -p {output[0].parent}
-        {config[pgap][pgap_path]} --taxcheck-only {input} --output {output[0].parent}
+        {config[pgap][pgap_path]} --taxcheck-only -g {input} --output {output[0].parent} -s 'bacterium sp.' -c {threads} -n
         """
 
 rule parse_taxcheck:
     input:
-        "results/005_taxcheck/{strain}/taxcheck_report.txt"
+        "results/005_taxcheck/{strain}/ani-tax-report.txt"
     output:
         "results/005_taxcheck/{strain}/species_name.txt"
     threads: 1
@@ -158,9 +158,5 @@ rule pgap_annotation:
     shell:
         """
         mkdir -p {output}
-        if {config[pgap][use_docker]}; then
-          docker run {config[pgap][docker_options]} {config[pgap][docker_image]} {config[pgap][pgap_path]} -t {threads} -o {output} -s {params.species_name} {input.fasta}
-        else
-          {config[pgap][pgap_path]} -t {threads} -o {output} -s {params.species_name} {input.fasta}
-        fi
+        {config[pgap][pgap_path]} -c {threads} -o {output} -s '{params.species_name}' -g {input.fasta} -n 
         """

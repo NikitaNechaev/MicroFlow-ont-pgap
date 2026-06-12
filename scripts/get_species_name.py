@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Script to extract species name from PGAP taxcheck report.
-Usage: python get_species_name.py <input_report> <output_txt>
-"""
 import sys
 import os
 import re
